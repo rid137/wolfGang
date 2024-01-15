@@ -1,6 +1,3 @@
-import avatar from '../assets/avatar4.jpg';
-
-
 export const paymentData = [
     {
         date: "14/04/2023",
