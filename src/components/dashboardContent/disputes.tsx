@@ -6,10 +6,10 @@ import { CustomTable } from './customTable';
 const Disputes = () => {
   return (
     <section>
-        <div className="text-center bg-greyBg p-10 w-full mt-4 rounded-md pb-10">
+        <div className="text-center bg-greyBg p-4 md:p-10 w-full mt-4 rounded-md pb-10">
             <Heading label="Disputes and  Inquiries" />
             <div className="flex flex-col mx-auto">
-            <small>Please choose the year of dispute you wish to look at.</small>
+            <p>Please choose the year of dispute you wish to look at.</p>
             </div>
 
             <div className="flex items-center justify-center gap-3 mx-auto my-3">

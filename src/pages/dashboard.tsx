@@ -1,7 +1,7 @@
-import Example from '../components/dashboardContent/pie_chart';
 import Heading from '../components/shared/heading';
 import Disputes from '../components/dashboardContent/disputes';
 import Scores from '../components/dashboardContent/scores';
+import { Piechart } from '../components/dashboardContent/pie_chart';
 
 const firstData: any = [
     { name: "778", value: 778, bg: "#002A70" },
@@ -22,38 +22,38 @@ const thirdData: any = [
 const Dashboard = () => {
   return (
     <section className='overflow-y-auto overflow-x-hidden'>
-        <div className="flex items-center justify-center gap-3 w-full mt-6">
-            <div className="bg-greyBg py-3 px-5 w-1/2 rounded-lg">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3 w-full mt-6">
+            <div className="bg-greyBg py-3 lg:px-5 px-3 md:w-1/2 w-full rounded-lg">
                 <Heading label="Credit Score" />
-                <div className="flex__center">
-                    <div className="flex__column">
-                        <Example data={firstData} />
-                        <p className="font-bold">Experian score</p>
+                <div className="flex__center sm:gap-10 gap-2 md:py-2 lg:py-5 ">
+                    <div className="flex__column gap-5">
+                       <Piechart data={firstData} />
+                        <p className="font-bold text-center text-sm md:text-[1rem]">Experian score</p>
 
                     </div>
 
-                    <div className="flex__column">
-                        <Example data={secondData} />
-                        <p className="font-bold">Equifax score</p>
+                    <div className="flex__column gap-5">
+                        <Piechart data={secondData} />
+                        <p className="font-bold text-center text-sm md:text-[1rem]">Equifax score</p>
 
                     </div>
 
-                    <div className="flex__column">
-                        <Example data={thirdData} />
-                        <p className="font-bold">Transunion score</p>
+                    <div className="flex__column gap-5">
+                        <Piechart data={thirdData} />
+                        <p className="font-bold text-center text-sm md:text-[1rem]">Transunion score</p>
 
                     </div>     
                 </div>
 
                 
                 <div className="text-center">
-                <p className='mt-4 mb-2'><span className='font-bold text-center'>Status :</span>  Client</p>
+                <p className='mt-4 mb-2 text-sm'><span className='font-bold text-center'>Status :</span>  Client</p>
                 <p className='text-sm'><span className='font-bold text-center'>Next Round Of Dispute :</span>  8th April 2023</p>
 
                 </div>
             </div>
 
-            <div className="bg-greyBg py-1 px-5 w-1/2 rounded-lg">
+            <div className="bg-greyBg py-1 px-5 md:w-1/2 w-full rounded-lg">
                 <Heading label="My Personal Details"/>
                 <div className="my-2 ml-4">
                     <p><span className='font-bold'>Name :</span>  Dianne Russell</p>
@@ -71,7 +71,7 @@ const Dashboard = () => {
                </div>
 
 
-            </div>
+            </div> 
         </div>
 
         <Disputes />

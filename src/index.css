@@ -9,6 +9,10 @@
   /* box-sizing: border-box; */
 }
 
+.overlay__width {
+  width: calc(100% - 60vw); 
+}
+
 .flex__center {
   display: flex;
   justify-content: center;

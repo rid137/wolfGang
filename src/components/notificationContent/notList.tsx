@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { notificationData } from '../../utils/dummy';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+import { notificationData } from '../../utils/dummy';
 
 const NotList = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -12,7 +12,7 @@ const NotList = () => {
   
   return (
     <div className="cente py-4 px-4 ">
-      <div className="gap-10 flex flex-col">
+      <div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {notificationData.map((item, index) => (
             <div

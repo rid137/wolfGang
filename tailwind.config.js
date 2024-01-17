@@ -15,10 +15,10 @@ export default {
       xxxl: '5rem'
     },
     screens: {
-      xs: '300px',
+      xs: '340px',
       sm: '480px',
       md: '768px',
-      lg: '976px',
+      lg: '1250px',
       xl: '1440px'
     },
 
@@ -28,6 +28,7 @@ export default {
         whiteBg: "#F5F5F5",
         greyBg: "#E6E6E6",
         lightPurple: "#FB9DFB",
+        transBg: "rgba(0, 0, 0, .5)"
         
       },
       // fontFamily: {

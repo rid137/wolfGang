@@ -7,7 +7,7 @@ const Notification = () => {
         <>
             <h2 className="font-bold mb-3">Notification</h2>
             
-                <div className="bg-greyBg p-5 ">
+                <div className="bg-greyBg">
 
                 <NotList />
             </div>

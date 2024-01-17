@@ -30,13 +30,13 @@ const Support = () => {
 
 
                 <form >
-                    <div className="flex justify-center items-center gap-4 w-full">
-                        <div className="flex flex-col w-1/2">
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full">
+                        <div className="flex flex-col w-full sm:w-1/2 ">
                             <label className="font-bold">Full Name</label>
                             <input type="text" className="w-full rounded-md py-4 px-3 mt-2" placeholder="Enter Your Name"  />
                         </div>
 
-                        <div className=" flex flex-col w-1/2">
+                        <div className=" flex flex-col w-full sm:w-1/2">
                             <label className="font-bold">Email</label>
                             <input type="text" className="w-full rounded-md py-4 px-3 mt-2" placeholder="Enter Your Email" />
                         </div>
@@ -53,7 +53,7 @@ const Support = () => {
 
                     <div className="flex items-center">
 
-                        <button className="bg-primary text-white px-32 py-3 rounded-md mx-auto">Send Message</button>
+                        <button className="bg-primary text-white px-6 md:px-32 py-3 rounded-md mx-auto">Send Message</button>
                     </div>
 
                 </form>
