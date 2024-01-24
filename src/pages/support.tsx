@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Support = () => {
     return(
         <>
-             <Link to='/settings' className="flex items-center gap-2 my-4 cursor-pointer">
+             <Link to='/dashboard/settings' className="flex items-center gap-2 my-4 cursor-pointer">
                 <FaArrowLeft />
                 <h2 className="font-bold mb-">Help &amp; Support</h2>           
             </Link>

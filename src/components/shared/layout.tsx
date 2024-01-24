@@ -1,15 +1,16 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import { IoSearchSharp } from "react-icons/io5";
+import { IoMdMenu } from "react-icons/io";
 import Sidebar from "./sidebar";
 import avatar from '../../assets/avatar.jpg'
-import { IoMdMenu } from "react-icons/io";
-
-
-interface LayoutProps {
-    child: ReactNode;
-}
   
-const Layout: React.FC<LayoutProps> = ({ child }) => {
+const Layout = () => {
     const [isNavOpen, setIsNavOpen] = useState<boolean>(false)
+    const location = useLocation()
+    if (location.pathname === "/client_details") {
+        console.log("hello")
+    }
 
     const handleClick = (): void => {
         setIsNavOpen(false)
@@ -29,14 +30,22 @@ const Layout: React.FC<LayoutProps> = ({ child }) => {
                         <IoMdMenu />
                     </div>
 
-                    <div className="flex__center gap-3 cursor-pointer">
-                        <p className="font-bold hidden lg:block">Dianell Russel</p>
-                        <img src={avatar} className="rounded-full w-14 h-14 md:w-16 md:h-16 " alt="" />
+                    <div className="flex__center gap-3 sm:gap-5 ">
+                        <div className="bg-[#D4D5D8] hidden rounded-full py-2 px-3 sm:flex items-center justify-center gap-3">
+                            <IoSearchSharp />
+                            <input type="text" className="bg-transparent outline-none text-gray-400" placeholder="search" />
+
+                        </div>
+                        <div className="bg-[#D4D5D8] sm:hidden block size-12 rounded-full flex__center"><IoSearchSharp className="text-[1.3rem]" /></div>
+                        <p className="font-bold hidden lg:block cursor-pointer">Dianell Russel</p>
+                        <img src={avatar} className="rounded-full w-12 h-12 md:w-16 md:h-16 cursor-pointer " alt="" />
                     </div>
 
                 </div>
 
-                <div className="">{child}</div>
+                <div className="mt-4">
+                    <Outlet />
+                </div>
             </div>
         </div>
     );
