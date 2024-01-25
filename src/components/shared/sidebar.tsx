@@ -4,8 +4,6 @@ import { MdDashboard } from "react-icons/md";
 import { MdOutlinePayment } from "react-icons/md";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
-import { MdOutlineHouse } from "react-icons/md";
-import { FaRegFileAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { IoLogOutOutline } from "react-icons/io5";
 import wolfgang from "../../assets/wolfgangLogo.png";

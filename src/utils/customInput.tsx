@@ -1,5 +1,5 @@
 interface CustomInputProps {
-    placeholder: string;
+    placeholder?: string;
 }
 
 const CustomInput: React.FC<CustomInputProps> = ({placeholder}) => {

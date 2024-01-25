@@ -7,7 +7,6 @@ interface CustomAuthPageProps {
     description: string;
     firstInputName: string;
     firstInputPlaceholder: string;
-    secondInputField?: boolean;
     secondInputName?: string;
     secondInputPlaceholder?: string;
     mandatory?: boolean;
@@ -18,7 +17,7 @@ interface CustomAuthPageProps {
 }
 
 
-const CustomAuthPage: React.FC<CustomAuthPageProps> = ({title, description, firstInputName, firstInputPlaceholder, secondInputField, secondInputName, secondInputPlaceholder, mandatory, forgotYourPassword, footerText, route, btnText }) => {
+const CustomAuthPage: React.FC<CustomAuthPageProps> = ({title, description, firstInputName, firstInputPlaceholder, secondInputName, secondInputPlaceholder, mandatory, forgotYourPassword, footerText, route, btnText }) => {
     return(
         <div className="bg-[#F5F5F5] py-5 px-4 md:px-8 w-[rem] h-[vh] mx-3 my-3 md:my-0 md:mx-0">
             <div className="flex__center bg-primary mb-3 py-2">
@@ -33,13 +32,10 @@ const CustomAuthPage: React.FC<CustomAuthPageProps> = ({title, description, firs
                         <label className="font-bold">{firstInputName}</label>
                         <CustomInput placeholder={firstInputPlaceholder} />
                     </div>
-                    {
-                        !secondInputField && 
-                        <div className="flex flex-col w-full">
-                            <label className="font-bold">{secondInputName}</label>
-                            <CustomInput placeholder={secondInputPlaceholder} />
-                        </div>
-                    }
+                    <div className="flex flex-col w-full">
+                        <label className="font-bold">{secondInputName}</label>
+                        <CustomInput placeholder={secondInputPlaceholder} />
+                    </div>
                 </div>
 
                 {mandatory && <p className="my-3"><span>*</span> This field is mandatory</p>}

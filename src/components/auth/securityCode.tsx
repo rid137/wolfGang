@@ -1,13 +1,12 @@
-import CustomInput from "../../utils/customInput";
 import wolfgangLogo from "../../assets/wolfgangLogo.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import OTPInput from "react-otp-input";
 
 
-const inputList = Array.from(new Array(4), (_, index) => {
-    return <div key={index} className="size-12 bg-[#E7E7E7]"></div>
-});
+// const inputList = Array.from(new Array(4), (_, index) => {
+//     return <div key={index} className="size-12 bg-[#E7E7E7]"></div>
+// });
 
 
 const SecurityCode = () => {
