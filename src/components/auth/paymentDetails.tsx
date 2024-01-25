@@ -41,32 +41,32 @@ const PaymentDetails = () => {
 
                 <p className="font-bold mt-2">Plan</p>
 
-                <div className="flex justify-between items-center border-y-2 border-black py-2 my-2 ">
+                <div className="flex justify-between items-center gap-3 sm:gap-0 border-y-2 border-black py-2 my-2 text-[.7rem] sm:text-[1rem]">
                     <div className="">
-                        <div className="flex__center gap-3">
-                            <input type="checkbox" checked name="" id="" className="w-5 h-5 rounded-md" />
+                        <div className="flex__center gap-1 xs:gap-3 mb-2 md:mb-0">
+                            <input type="checkbox" checked name="" id="" className="xs:size-5 size-3 rounded-md" />
                             <p>Monthly Credit Disputing</p>
                         </div>
                         
-                        <div className="flex__center gap-3">
-                            <input type="checkbox" name="" id="" className="w-5 h-5 rounded-md" />
+                        <div className="flex__center gap-1 xs:gap-3 mb-2 md:mb-0">
+                            <input type="checkbox" name="" id="" className="xs:size-5 size-3 rounded-md" />
                             <p>Annuall Credit Disputing</p>
                         </div>
-                        <div className="flex__center gap-3">
-                            <input type="checkbox" name="" id="" className="w-5 h-5 rounded-md" />
+                        <div className="flex__center gap-1 xs:gap-3">
+                            <input type="checkbox" name="" id="" className="xs:size-5 size-3 rounded-md" />
                             <p>Lifetime Credit Disputing</p>
                         </div>
                     </div>
 
                     <div className="">
-                        <p>Per month : $139.00</p>
-                        <p>Per year : $997.00</p>
+                        <p className="mb-2 md:mb-0">Per month : $139.00</p>
+                        <p className="mb-2 md:mb-0">Per year : $997.00</p>
                         <p>Only Once : $2997.00</p>
                     </div>
 
                     <div className="">
-                        <p>1 x $139.00</p>
-                        <p>1 x $997.00</p>
+                        <p className="mb-2 md:mb-0">1 x $139.00</p>
+                        <p className="mb-2 md:mb-0">1 x $997.00</p>
                         <p>1 x $2997.00</p>
                     </div>
 
