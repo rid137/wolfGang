@@ -75,17 +75,17 @@ const Login = () => {
 
     const onSubmit: SubmitHandler<FormFields> = async (data) => {
         
-        console.log("data", data)
+        // console.log("data", data)
         const formData = new FormData();
         
         formData.append("email", data.email);
         formData.append("password", data.password);
 
-        console.log("formData", formData)
-        console.log("FormData contents:");
-        for (let pair of formData.entries()) {
-            console.log(pair[0] + ": " + pair[1]);
-        }
+        // console.log("formData", formData)
+        // console.log("FormData contents:");
+        // for (let pair of formData.entries()) {
+        //     console.log(pair[0] + ": " + pair[1]);
+        // }
 
 
         try {
