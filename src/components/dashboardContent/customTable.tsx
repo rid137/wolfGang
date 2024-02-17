@@ -15,8 +15,8 @@ export const CustomTable = () => {
 
                 {Array(10)
                         .fill(10)
-                        .map((_,) => (
-                    <div className="bg-white mx-4 rounded-lg" >
+                        .map((_,index) => (
+                    <div key={index} className="bg-white mx-4 rounded-lg" >
                         <div className="flex justify-between items-center gap-2 md:gap-0 w-full  mb-2 py-3 lg:px-6 px-3 text-[.7rem] lg:text-[.9rem]">
                             <p>Dianne Russell</p>
                             <p>******* 7869</p>
@@ -50,8 +50,8 @@ export const CustomTable = () => {
 
                 {Array(10)
                         .fill(10)
-                        .map((_,) => (
-                    <div className="bg-white mx-4 rounded-lg" >
+                        .map((_, index) => (
+                    <div key={index} className="bg-white mx-4 rounded-lg" >
                         <div className="flex justify-between items-center gap-2 md:gap-0 w-full  mb-2 py-3 lg:px-6 px-3 text-[.7rem] lg:text-[.9rem]">
                             <p>Dianne Russell</p>
                             <p>06/02/2022</p>

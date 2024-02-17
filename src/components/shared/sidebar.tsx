@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdDashboard } from "react-icons/md";
 import { MdOutlinePayment } from "react-icons/md";
 import { IoMdNotificationsOutline } from "react-icons/io";
@@ -7,6 +7,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { IoLogOutOutline } from "react-icons/io5";
 import wolfgang from "../../assets/wolfgangLogo.png";
+import { UserAuth } from "../../hooks/userAuthContext";
 
 
 interface SidebarProps {
@@ -17,6 +18,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ isNavOpen, handleClick }) => {
     const [active, setActive] = useState("dashboard")
     const navigate = useNavigate();
+    const { logout, clientDetials } = UserAuth()
 
     useEffect(() => {
         document.body.style.overflow = isNavOpen ? 'hidden' : 'auto';
@@ -24,26 +26,27 @@ const Sidebar: React.FC<SidebarProps> = ({ isNavOpen, handleClick }) => {
         return () => {
           document.body.style.overflow = 'auto';
         };
-      }, [isNavOpen]);
+    }, [isNavOpen]);
 
-    const logout = ():void => {
-        if(window.confirm("Are you sure you want to logout?")) {
-            alert("You have logged out successfully")
-            navigate("/")
-        }
-    }
 
-    const location = useLocation()
+    // const location = useLocation()
     
-    useEffect(() => {
-        if (location.pathname === "/client_details") {
-          setActive("dashboard");
-        }
+    // useEffect(() => {
+    //     if (location.pathname === "/client_details") {
+    //       setActive("dashboard");
+    //     }
 
-        else if (location.pathname === "/dispute_center/dispute_account_details") {
-          setActive("dispute_center");
+    //     else if (location.pathname === "/dispute_center/dispute_account_details") {
+    //       setActive("dispute_center");
+    //     }
+    // }, [location.pathname]);
+
+    const handleLogout = ():void => {
+        if(window.confirm("Are you sure you want to logout?")) {
+            logout()
         }
-      }, [location.pathname]);
+        navigate("/login")
+    }
 
     
     return (
@@ -103,15 +106,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isNavOpen, handleClick }) => {
                         <li onClick={handleClick}>
                             <Link to={"/dashboard/settings"} className={`flex gap-3 items-center cursor-pointer py-[.3rem] rounded-r-full hover:bg-white hover:text-primary pl-6 sm:pl-10 ${active === "" && "bg-white text-primary" }`} onClick={() => setActive("")}>
                                 <FaUser className="text-[1rem] sm:text-[1.4rem] " />
-                                <p className="text-[.9rem] sm:text-md">Dianne Rusell</p>
+                                <p className="text-[.9rem] sm:text-md">{clientDetials?.firstName} {clientDetials?.lastName}</p>
                             </Link>
 
                         </li>
-                        <li onClick={logout}>
-                            <p  className={`flex gap-3 items-center cursor-pointer py-[.3rem] rounded-r-full hover:bg-white hover:text-primary pl-6 sm:pl-10 ${active === "logout" && "bg-white text-primary" }`} onClick={() => setActive("logout")}>
+                        <li onClick={handleLogout}>
+                            <h4  className={`flex gap-3 items-center cursor-pointer py-[.3rem] rounded-r-full hover:bg-white hover:text-primary pl-6 sm:pl-10 ${active === "logout" && "bg-white text-primary" }`} onClick={() => setActive("logout")}>
                                 <IoLogOutOutline className="text-[1.1rem] sm:text-[1.4rem]" />
                                 <p className="text-[.9rem] sm:text-md">Log Out</p>
-                            </p>
+                            </h4>
                         </li>
                     </ul>
             </div>

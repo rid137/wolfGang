@@ -11,6 +11,14 @@ import OTPInput from "react-otp-input";
 
 const SecurityCode = () => {
     const [otp, setOtp] = useState('');
+    // const [otp, setOtp] = useState<string>("")
+
+    const handleOtpChange = (otp: string) => {
+        setOtp(otp)
+    }
+    // const handleExit = () => {
+    //     navigate(-1)
+    // }
 
     const OtpInput = () => {
         return(
@@ -19,9 +27,10 @@ const SecurityCode = () => {
             onChange={setOtp}
             numInputs={4}
             renderSeparator={<span> </span>}
-            inputType="tel"
-            onPaste={handlePaste}
-            containerStyle={{ display: 'unset' }}
+            // inputType="tel"
+            // onPaste={handlePaste}
+            shouldAutoFocus
+            // containerStyle={{ display: 'unset' }}
             inputStyle={{ width: "3rem", height: "3.5rem", color: "black " }}
             renderInput={(props) => <input {...props} className='' />}
           />
@@ -48,7 +57,29 @@ const SecurityCode = () => {
             <form action="">
                 <div className="flex items-center justify-center flex-co gap-4 md:mx-4 lg:mx-0">
                     {/* {inputList} */}
-                    <OtpInput />
+                    {/* <OtpInput /> */}
+                    {/* <OTPInput
+                        value={otp}
+                        onChange={handleOtpChange}
+                        numInputs={5}
+                        shouldAutoFocus
+                        inputType='text'
+                        containerStyle='justify-center xl:mb-[2vw] md:mb-[4vw] mb-[6vw] md:gap-[2vw] gap-[4vw] xl:gap-[1vw]'
+                        inputStyle='border-[#D9D9D9] text-center text-md border-b-2 !w-[10vw] xl:!w-[5vw] md:!w-[8vw] focus:border-b-2 focus:border-[#C208C2] focus:outline-none'
+                        renderInput={(props) => <input {...props} />}
+                    /> */}
+                    <OTPInput
+                        value={otp}
+                        onChange={setOtp}
+                        numInputs={4}
+                        renderSeparator={<span> </span>}
+                        // inputType="tel"
+                        onPaste={handlePaste}
+                        shouldAutoFocus
+                        // containerStyle={{ display: 'unset' }}
+                        inputStyle={{ width: "3rem", height: "3.5rem", color: "black " }}
+                        renderInput={(props) => <input {...props} className='' />}
+                    />
                     
                    
                 </div>

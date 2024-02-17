@@ -1,20 +1,26 @@
 import { useState } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Link, Navigate, Outlet, useLocation } from "react-router-dom";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
 import Sidebar from "./sidebar";
 import avatar from '../../assets/avatar.jpg'
+import { UserAuth } from "../../hooks/userAuthContext";
   
 const Layout = () => {
     const [isNavOpen, setIsNavOpen] = useState<boolean>(false)
+    const { userAuthData } = UserAuth()
     const location = useLocation()
-    if (location.pathname === "/client_details") {
-        console.log("hello")
-    }
+    // if (location.pathname === "/client_details") {
+    //     console.log("hello")
+    // }
 
     const handleClick = (): void => {
         setIsNavOpen(false)
     }
+
+    // if (userAuthData === null) {
+    //     return <Navigate to='/login' />;
+    // }
 
     return(
         <div className={`flex `}>
@@ -37,8 +43,8 @@ const Layout = () => {
 
                         </div>
                         <div className="bg-[#D4D5D8] sm:hidden block size-12 rounded-full flex__center"><IoSearchSharp className="text-[1.3rem]" /></div>
-                        <p className="font-bold hidden lg:block cursor-pointer">Dianell Russel</p>
-                        <img src={avatar} className="rounded-full w-12 h-12 md:w-16 md:h-16 cursor-pointer " alt="" />
+                        {/* <p className="font-bold hidden lg:block cursor-pointer">Dianell Russel</p> */}
+                        <Link to="/dashboard/settings"><img src={avatar} className="rounded-full w-12 h-12 md:w-16 md:h-16 cursor-pointer " alt="profile_image" /></Link>
                     </div>
 
                 </div>
