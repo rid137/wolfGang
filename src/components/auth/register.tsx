@@ -74,7 +74,7 @@ const Register = () => {
                 <img src={wolfgangLogo} className="" alt="" />
             </div>
             <h3 className="text-primary text-[1.4rem] md:text-[1.7rem] font-bold text-center">Create An Account</h3>
-            <p className="text-center mb-6">Already have an account? <Link to="/login" className="text-primary">Log In</Link></p>
+            <p className="text-center mb-6">Already have an account? <Link to="/" className="text-primary">Log In</Link></p>
 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex items-center justify-center md:flex-row flex-col gap-4 md:mx-4 lg:mx-0">

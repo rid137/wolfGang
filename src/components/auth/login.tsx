@@ -67,11 +67,11 @@ const Login = () => {
         register,
         formState: { errors, isSubmitting },
     } = useForm<FormFields>({
-        defaultValues: {
-            email: "Xquizit52@gmail.com",
-            password: "password1",
+        // defaultValues: {
+        //     email: "Xquizit52@gmail.com",
+        //     password: "password1",
             
-        },
+        // },
     resolver: zodResolver(loginSchema),
     });
 
@@ -139,7 +139,7 @@ const Login = () => {
                 <img src={wolfgangLogo} className="" alt="" />
             </div>
             <h3 className="text-primary text-[1.4rem] md:text-[1.7rem] font-bold text-center ">Log In</h3>
-            <p className="text-center mb-6">Don’t have an account? <Link to="/" className="text-primary">Create an Account</Link></p>
+            <p className="text-center mb-6">Don’t have an account? <Link to="/register" className="text-primary">Create an Account</Link></p>
 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex items-center justify-center flex-col gap-4 md:mx-4 lg:mx-0">

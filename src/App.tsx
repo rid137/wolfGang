@@ -38,11 +38,11 @@ const App = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<AuthLayout />}>
-                        <Route index element={<Register />} />
+                        <Route index element={<Login />} />
                         <Route path='payment_details' element={<PaymentDetails />} />
                         <Route path='document_upload' element={<DocumentUpload />} />
-                        <Route path='create_password' element={<CreatePassword />} />
-                        <Route path='login' element={<Login />} />
+                        <Route path='create_password' element={<CreatePassword />} />   
+                        <Route path='register' element={<Register />} />
                         <Route path='forgot_password' element={<ForgotPassword />} />
                         <Route path='security_code' element={<SecurityCode />} />
                         <Route path='reset_password' element={<ResetPassword />} />

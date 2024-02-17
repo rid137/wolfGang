@@ -45,7 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isNavOpen, handleClick }) => {
         if(window.confirm("Are you sure you want to logout?")) {
             logout()
         }
-        navigate("/login")
+        navigate("/")
     }
 
     
