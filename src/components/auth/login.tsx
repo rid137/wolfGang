@@ -1,4 +1,4 @@
-import CustomAuthPage from "./customAuthPage";
+// import CustomAuthPage from "./customAuthPage";
 import wolfgangLogo from "../../assets/wolfgangLogo.png";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../hooks/userAuthContext";
@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { BASE_URL } from "../../libs";
 import axios from "axios";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 
@@ -38,11 +38,11 @@ const Login = () => {
 
 
 
-    const LOCAL_STORAGE_KEY = "returnedUserData"
+    // const LOCAL_STORAGE_KEY = "returnedUserData"
 
 
-    useEffect(() => {
-        const retrivedUserData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) as string)
+    // useEffect(() => {
+        // const retrivedUserData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) as string)
         // console.log(retrivedUserData)
 
         // if(retrivedUserData) setUserData(retrivedUserData)
@@ -54,7 +54,7 @@ const Login = () => {
         //     });
         // }
 
-    }, [])
+    // }, [])
     // console.log("userData", userData?.email)
 
     if (userAuthData !== null) {
@@ -63,10 +63,8 @@ const Login = () => {
 
 
     const {
-        control,
         handleSubmit,
         register,
-        reset,
         formState: { errors, isSubmitting },
     } = useForm<FormFields>({
         defaultValues: {

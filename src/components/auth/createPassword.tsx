@@ -1,6 +1,6 @@
-import CreatePasswords from "./customAuthPage";
+// import CreatePasswords from "./customAuthPage";
 import wolfgangLogo from "../../assets/wolfgangLogo.png";
-import { Link, useNavigate } from "react-router-dom";
+// import {  useNavigate } from "react-router-dom";
 import { UserAuth } from "../../hooks/userAuthContext";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -23,16 +23,14 @@ const passwordSchema = z.object({
 
 const CreatePassword = () => {
 
-    const { user, setUser, setClientDetials } = UserAuth();
-    const navigate = useNavigate();
+    const { user, setUser } = UserAuth();
+    // const navigate = useNavigate();
 
 
 
     const {
-        control,
         handleSubmit,
         register,
-        reset,
         formState: { errors, isSubmitting },
     } = useForm<FormFields>({
     resolver: zodResolver(passwordSchema),
@@ -41,7 +39,6 @@ const CreatePassword = () => {
 
 
     const onSubmit: SubmitHandler<FormFields> = async (data) => {
-        const getName = user?.firstName
 
         // console.log(data);
 

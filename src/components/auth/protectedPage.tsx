@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 // import { AdminAuth } from '../../hooks/useAdminAuthContext';
 import { ReactNode } from 'react';
 import { Navigate } from 'react-router-dom';
@@ -10,7 +10,7 @@ interface ProtectedPageProps {
 
 const ProtectedPage: React.FC<ProtectedPageProps> = ({ children }) => {
   const { userAuthData } = UserAuth();
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, ] = useState(true)
 
   // useEffect(() => {
   //   setTimeout(() => {

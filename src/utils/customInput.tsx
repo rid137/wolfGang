@@ -19,7 +19,7 @@
 // }
 
 import React from 'react';
-import { UseFormRegister, UseFormRegisterReturn } from 'react-hook-form';
+import { UseFormRegister } from 'react-hook-form';
 
 interface CustomInputProps {
   placeholder?: string;
@@ -29,7 +29,7 @@ interface CustomInputProps {
   name?: string
 }
 
-const CustomInput: React.FC<CustomInputProps> = ({ placeholder, type, register, name }) => {
+const CustomInput: React.FC<CustomInputProps> = ({ placeholder, type}) => {
   return (
     <input
       type={type ? type : 'text'}

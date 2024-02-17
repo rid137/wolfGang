@@ -21,7 +21,7 @@ import SettingsLayout from './pages/settingsLayout';
 import NotFound from './pages/notFound';
 import { AuthContextProvider } from './context/authcontext';
 import { Toaster } from 'react-hot-toast';
-import ProtectedPage from './components/auth/protectedPage';
+// import ProtectedPage from './components/auth/protectedPage';
 
 
 

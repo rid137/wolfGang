@@ -1,5 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
-import CustomInput from "../../utils/customInput";
+import { useNavigate } from "react-router-dom";
 import wolfgangLogo from "../../assets/wolfgangLogo.png";
 import fileUploads from "../../assets/fileUploads.jpg";
 import { UserAuth } from "../../hooks/userAuthContext";
@@ -7,9 +6,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
-import { BASE_URL } from "../../libs";
-import avatar from "../../assets/avatar.jpg"
-import axios from "axios";
 import toast from "react-hot-toast";
 
 // Define Zod schema for form validation
@@ -24,8 +20,8 @@ const registerSchema = z.object({
   type FormFields = z.infer<typeof registerSchema>;
 
 const DocumentUpload = () => {
-    const [placeholderImg, setPlaceholderImg] = useState<File | null>()
-    const [addPfImg, setAddPfImg] = useState<File | null>()
+    // const [placeholderImg, setPlaceholderImg] = useState<File | null>()
+    // const [addPfImg, setAddPfImg] = useState<File | null>()
 
     const [uploadIdThumbnail, setUploadIdThumbnail] = useState(fileUploads)
     const [uploadPfThumbnail, setUploadPfThumbnail] = useState(fileUploads)
@@ -39,7 +35,7 @@ const DocumentUpload = () => {
 
     const uploadId = (e: React.ChangeEvent<HTMLInputElement>) => {  // to upload ID
         const file = e.target.files && e.target.files[0];
-        setPlaceholderImg(file);
+        // setPlaceholderImg(file);
         if(file && file?.type !== "image/jpeg") {
             toast.error('Only images are allowed');
             return;
@@ -74,7 +70,7 @@ const DocumentUpload = () => {
 
     const uploadAddPf = (e: React.ChangeEvent<HTMLInputElement>) => {  // to upload ID
         const file = e.target.files && e.target.files[0];
-        setAddPfImg(file);
+        // setAddPfImg(file);
         // setUser({...user, addPf: addPfImg})
         console.log("file", file)
 
@@ -119,10 +115,8 @@ const DocumentUpload = () => {
 
 
     const {
-        control,
         handleSubmit,
         register,
-        reset,
         formState: { errors, isSubmitting },
     } = useForm<FormFields>({
         // defaultValues: {

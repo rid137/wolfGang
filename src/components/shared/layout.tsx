@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { Link, Navigate, Outlet, useLocation } from "react-router-dom";
+import { Link,  Outlet } from "react-router-dom";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
 import Sidebar from "./sidebar";
 import avatar from '../../assets/avatar.jpg'
-import { UserAuth } from "../../hooks/userAuthContext";
+// import { UserAuth } from "../../hooks/userAuthContext";
   
 const Layout = () => {
     const [isNavOpen, setIsNavOpen] = useState<boolean>(false)
-    const { userAuthData } = UserAuth()
-    const location = useLocation()
+    // const { userAuthData } = UserAuth()
+    // const location = useLocation()
     // if (location.pathname === "/client_details") {
     //     console.log("hello")
     // }

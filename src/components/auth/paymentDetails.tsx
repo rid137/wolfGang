@@ -1,5 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
-import CustomInput from "../../utils/customInput";
+import { useNavigate } from "react-router-dom";
 import wolfgangLogo from "../../assets/wolfgangLogo.png";
 import { UserAuth } from "../../hooks/userAuthContext";
 import { z } from "zod";
@@ -48,13 +47,13 @@ const PaymentDetails = () => {
     const [subOptions, setSubOptions] = useState<SubOptions[]>([])
     
     const [isCheckedMonthlyInput, setIsCheckedMonthlyInput] = useState(false);
-    const [monthlyInputValue, setMonthlyInputValue] = useState(''); // State to store the value 'Monthly'
+    const [, setMonthlyInputValue] = useState(''); // State to store the value 'Monthly'
 
     const [isCheckedYearlyInput, setIsCheckedYearlyInput] = useState(false);
-    const [yearlyInputValue, setYearlyInputValue] = useState('');
+    const [, setYearlyInputValue] = useState('');
 
     const [isCheckedLifeTimeInput, setIsCheckedLifeTimeInput] = useState(false);
-    const [lifeTimeInputValue, setLifeTimeInputValue] = useState('');
+    const [, setLifeTimeInputValue] = useState('');
 
     const navigate = useNavigate();
     const [subType, setSubType] = useState<string>("")
@@ -83,7 +82,7 @@ const PaymentDetails = () => {
     // console.log("monthly", monthlyInputValue)
     // console.log("yearly", yearlyInputValue)
     // console.log("lifetime", lifeTimeInputValue)
-    console.log("subType", subType)
+    // console.log("subType", subType)
 
 
 
@@ -114,7 +113,7 @@ const PaymentDetails = () => {
 
     
         const fetchallSubsInfo = async () => {
-            const allSubsInfo = await fetchSub();
+            await fetchSub();
             // console.log("allSubsInfo", allSubsInfo);
         };
 
@@ -150,7 +149,6 @@ const PaymentDetails = () => {
     
 
     const {
-        control,
         handleSubmit,
         register,
         reset,

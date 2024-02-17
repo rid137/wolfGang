@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useEffect, useState, ReactNode } from 'react';
 import { ClientDetailsType } from '../types/clientDetailsObj';
 
 
