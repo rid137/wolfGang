@@ -82,13 +82,11 @@ const Disputes: React.FC<DisputesProps> = (): any => {
         // };
     
         const fetchClientDisputeAccountsInfo = async () => {
-            const allDisputeAccountsInfo = await fetchDisputeAccountsByIdAndDate();
-            console.log("allDisputeAccountsInfo", allDisputeAccountsInfo);
+            await fetchDisputeAccountsByIdAndDate();
         };
     
         const fetchallInquiriesInfo = async () => {
-            const allInquiriesInfo = await fetchInquiriesByIdAndDate ();
-            console.log("allInquiriesInfo", allInquiriesInfo);
+            await fetchInquiriesByIdAndDate ();
         };
     
     
