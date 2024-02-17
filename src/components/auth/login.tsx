@@ -57,10 +57,7 @@ const Login = () => {
     // }, [])
     // console.log("userData", userData?.email)
 
-    if (userAuthData !== null) {
-        return <Navigate to='/dashboard' />;
-    }
-
+    
 
     const {
         handleSubmit,
@@ -131,6 +128,11 @@ const Login = () => {
         // reset()
         // Add your form submission logic here
     };
+
+    if (userAuthData !== null) {
+        return <Navigate to='/dashboard' />;
+    }
+
 
 
     return(
