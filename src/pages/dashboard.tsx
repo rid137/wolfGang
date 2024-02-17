@@ -25,7 +25,7 @@ const Dashboard = () => {
 
     const accessToken = userAuthData?.token
     const id = userAuthData?.userId
-    console.log("id", id)
+    // console.log("id", id)
 
     // const experianScoreValue = clientDetials?.experianScore as number
 
@@ -116,8 +116,8 @@ const Dashboard = () => {
     // };
 
     const fetchClientDisputeAccountsInfo = async () => {
-        const allDisputeAccountsInfo = await fetchDisputeAccounts();
-        console.log("allDisputeAccountsInfo", allDisputeAccountsInfo);
+        await fetchDisputeAccounts();
+        // console.log("allDisputeAccountsInfo", allDisputeAccountsInfo);
     };
 
     const fetchallInquiriesInfo = async () => {
@@ -127,8 +127,8 @@ const Dashboard = () => {
 
 
     const fetchClientScoresInfo = async () => {
-      const allScoresInfo = await fetchAllScores();
-      console.log("allScoresInfo ", allScoresInfo );
+      await fetchAllScores();
+      // console.log("allScoresInfo ", allScoresInfo );
   };
 
 
@@ -259,8 +259,8 @@ const Dashboard = () => {
       
       useEffect(() => {
         const fetchUserInfo = async () => {
-          const userInfo = await getUserInfo();
-          console.log("userInfo", userInfo);
+           await getUserInfo();
+          // console.log("userInfo", userInfo);
         };
 
         // const fetchManagerForClient = async () => {

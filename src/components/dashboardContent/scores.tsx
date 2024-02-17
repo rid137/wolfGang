@@ -12,7 +12,7 @@ interface ScoresProps {
 
 
 const Scores = ({clientScores}: ScoresProps) => {
-    console.log("scores", clientScores)
+    // console.log("scores", clientScores)
     // const formattedDate = (dateString: string) => {
     //     const formDate = DateTime.fromISO(dateString).toFormat('dd LLL, yyyy')
     //     return formDate
