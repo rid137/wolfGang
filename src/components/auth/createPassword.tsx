@@ -107,7 +107,7 @@ const CreatePassword = () => {
             // console.log("response", response.data)
             // setUserAuthData(response.data)
             if(response.statusText === "OK") {
-                console.log("response", response.data)
+                // console.log("response", response.data)
                 toast.success("Client Account Created successfully", { id: toastId });
             }
     

@@ -118,8 +118,8 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
   };
 
 
-  console.log("clientDetials", clientDetials)
-  console.log("userAuthData", userAuthData)
+  // console.log("clientDetials", clientDetials)
+  // console.log("userAuthData", userAuthData)
   // console.log("user", user)
     
   

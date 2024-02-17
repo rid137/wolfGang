@@ -100,7 +100,7 @@ const Login = () => {
                     'Content-Type': 'application/json',
                 }
             })
-            console.log("response", response.data)
+            // console.log("response", response.data)
             
 
             
