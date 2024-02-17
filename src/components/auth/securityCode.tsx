@@ -13,29 +13,29 @@ const SecurityCode = () => {
     const [otp, setOtp] = useState('');
     // const [otp, setOtp] = useState<string>("")
 
-    const handleOtpChange = (otp: string) => {
-        setOtp(otp)
-    }
+    // const handleOtpChange = (otp: string) => {
+    //     setOtp(otp)
+    // }
     // const handleExit = () => {
     //     navigate(-1)
     // }
 
-    const OtpInput = () => {
-        return(
-            <OTPInput
-            value={otp}
-            onChange={setOtp}
-            numInputs={4}
-            renderSeparator={<span> </span>}
-            // inputType="tel"
-            // onPaste={handlePaste}
-            shouldAutoFocus
-            // containerStyle={{ display: 'unset' }}
-            inputStyle={{ width: "3rem", height: "3.5rem", color: "black " }}
-            renderInput={(props) => <input {...props} className='' />}
-          />
-        )
-    }
+    // const OtpInput = () => {
+    //     return(
+    //         <OTPInput
+    //         value={otp}
+    //         onChange={setOtp}
+    //         numInputs={4}
+    //         renderSeparator={<span> </span>}
+    //         // inputType="tel"
+    //         // onPaste={handlePaste}
+    //         shouldAutoFocus
+    //         // containerStyle={{ display: 'unset' }}
+    //         inputStyle={{ width: "3rem", height: "3.5rem", color: "black " }}
+    //         renderInput={(props) => <input {...props} className='' />}
+    //       />
+    //     )
+    // }
 
     const handlePaste: React.ClipboardEventHandler = (event) => {
         const data = event.clipboardData.getData('text');
